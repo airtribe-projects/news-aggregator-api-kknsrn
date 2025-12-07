@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Aggregator - Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">📰 News Aggregator</div>
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link active">Dashboard</a>
+                <a href="pages/news.html" class="nav-link">Search News</a>
+                <a href="pages/profile.html" class="nav-link">Profile</a>
+                <button onclick="logout()" class="nav-link btn-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>📰 Your Personalized News Feed</h1>
+        <div id="error-message" class="error-message" style="display:none;"></div>
+        <div id="loading" class="loading" style="display:none;">Loading news...</div>
+        
+        <div id="news-grid" class="news-grid"></div>
+        <div id="no-news" class="no-news" style="display:none;">
+            No news articles found. Please set your preferences.
+        </div>
+    </main>
+
+    <script src="assets/auth.js"></script>
+    <script src="assets/api.js"></script>
+    <script src="assets/dashboard.js"></script>
+</body>
+</html>

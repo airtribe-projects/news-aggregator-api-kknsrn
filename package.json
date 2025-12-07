@@ -1,0 +1,31 @@
+{
+    "name": "personalized-news-aggregator",
+    "version": "1.0.0",
+    "description": "A RESTful API for a personalized news aggregator using Node.js, Express.js, bcrypt, and JWT",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js",
+        "dev:quiet": "set NODE_NO_DEPRECATION=1 && nodemon app.js"
+    },
+    "keywords": [
+        "news",
+        "aggregator",
+        "api",
+        "rest",
+        "express"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.13.2",
+        "bcrypt": "^5.1.1",
+        "dotenv": "^16.6.1",
+        "express": "^4.22.1",
+        "jsonwebtoken": "^9.0.3",
+        "mongoose": "^7.8.8"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.11"
+    }
+}

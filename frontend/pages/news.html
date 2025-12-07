@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search News - News Aggregator</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">📰 News Aggregator</div>
+            <div class="navbar-menu">
+                <a href="../index.html" class="nav-link">Dashboard</a>
+                <a href="news.html" class="nav-link active">Search News</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <button onclick="logout()" class="nav-link btn-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container news-page">
+        <h1>🔍 Search News</h1>
+
+        <form id="search-form" onsubmit="handleSearch(event)" class="search-form">
+            <input type="text" id="search-query" placeholder="Search news by topic..." class="search-input" required>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <div id="error-message" class="error-message" style="display:none;"></div>
+        <div id="loading" class="loading" style="display:none;">Searching news...</div>
+
+        <div id="news-grid" class="news-grid"></div>
+        <div id="no-news" class="no-news" style="display:none;">
+            No articles found for your search.
+        </div>
+    </main>
+
+    <script src="../assets/auth.js"></script>
+    <script src="../assets/api.js"></script>
+    <script src="../assets/news.js"></script>
+</body>
+
+</html>
