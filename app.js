@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Main application file
 require('dotenv').config();
 const express = require('express');
@@ -58,3 +59,22 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+=======
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.listen(port, (err) => {
+    if (err) {
+        return console.log('Something bad happened', err);
+    }
+    console.log(`Server is listening on ${port}`);
+});
+
+
+
+module.exports = app;
+>>>>>>> e0fa7edc9d9c6ff6a916e3f191dce9cb6c497615
